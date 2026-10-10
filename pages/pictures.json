@@ -1,8 +1,14 @@
 {
     "title": "Pictures",
     "blocks": [
-        { "type": "text", "value": "Some Stock Images." },
-        { "type": "image", "src": "img/laptop1.jpg", "alt": "A Stock image of a Laptop", "caption": "A stock image of a laptop" },
-        { "type": "image", "src": "img/laptop1.jpg", "alt": "A Stock image of a Laptop", "caption": "A stock image of a laptop" }
+        {
+            "type": "group",
+            "layout": "row",
+            "blocks": [
+                { "type": "text", "value": "Some Stock Images." },
+                { "type": "image", "src": "img/laptop1.jpg", "alt": "A Stock image of a Laptop", "caption": "A stock image of a laptop" },
+                { "type": "image", "src": "img/laptop1.jpg", "alt": "A Stock image of a Laptop", "caption": "A stock image of a laptop" }
+            ]  
+        }     
     ]
 }
