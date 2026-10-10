@@ -4,6 +4,7 @@
         { "type": "text", "value": "Welcome to my website! I am a hobbyist of various things." },
         { "type": "heading", "value": "About Me" },
         { "type": "text", "value": "I am a hobbyist with a passion for creating beautiful and functional websites." },
+        { "type": "image", "src": "img/laptop1.jpg", "alt": "Placeholder Image", "caption": "Placeholder" },
         { "type": "heading", "value": "What is this website about?" },
         { "type": "text", "value": "This website is about showcasing my work." }
     ]
