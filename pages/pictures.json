@@ -1,13 +1,13 @@
 {
     "title": "Pictures",
     "blocks": [
+        { "type": "intro", "value": "Temporary Placeholders." },
         {
             "type": "group",
             "layout": "row",
             "blocks": [
-                { "type": "text", "value": "Some Stock Images." },
-                { "type": "image", "src": "img/laptop1.jpg", "alt": "A Stock image of a Laptop", "caption": "A stock image of a laptop" },
-                { "type": "image", "src": "img/laptop1.jpg", "alt": "A Stock image of a Laptop", "caption": "A stock image of a laptop" }
+                { "type": "image", "src": "img/laptop1.jpg", "alt": "A Stock image of a Laptop"},
+                { "type": "image", "src": "img/code1.jpg", "alt": "A Stock image of Code"}
             ]  
         }     
     ]

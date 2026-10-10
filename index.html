@@ -5,13 +5,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bodyclass">
-    <div class="containersidebar" id="sidebar">
-        <button class="sidebar-icon icon-menu" id="menuButton" aria-label="Menu" aria-expanded="false"></button>
-        <button class="sidebar-icon icon-home" data-page="home" aria-label="Home"></button>
-        <button class="sidebar-icon icon-project" data-page="projects" aria-label="Projects"></button>
-        <button class="sidebar-icon icon-envelope" data-page="contact" aria-label="Contact"></button>
-        <button class="sidebar-icon icon-picture" data-page="pictures" aria-label="Pictures"></button>
-    </div>
+    <nav class="taskbar">
+        <button class="nav-icon icon-home" data-page="home" aria-label="Home" title="Home"></button>
+        <button class="nav-icon icon-project" data-page="projects" aria-label="Projects" title="Projects"></button>
+        <button class="nav-icon icon-envelope" data-page="contact" aria-label="Contact" title="Contact"></button>
+        <button class="nav-icon icon-picture" data-page="pictures" aria-label="Pictures" title="Pictures"></button>
+    </nav>
     <div class ="containerheader" id="content">
         <h1 id="pageTitle"></h1>
         <p id="pageBody"></p>

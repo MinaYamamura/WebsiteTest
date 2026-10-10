@@ -1,14 +1,14 @@
 async function loadPage(name) {
     const title = document.getElementById('pageTitle');
     const body = document.getElementById('pageBody');
-    body.replaceChildren(); // clear the old content
+     // clear the old content
     try {
         const response = await fetch(`pages/${name}.json`);
         if (!response.ok) throw new Error(response.status);
         const data = await response.json();
     
         title.textContent = data.title;
-    
+        body.replaceChildren();
         for (const block of data.blocks) {
           const el = buildBlock(block);
           if (el) body.append(el);
@@ -60,6 +60,12 @@ function buildBlock(block) {
             a.target = '_blank';                          // opens in a new tab
             a.rel = 'noopener noreferrer';
             return a;
+        }
+        case 'intro': {
+            const p = document.createElement('p');
+            p.className = 'intro';
+            p.textContent = block.value;
+            return p;
         }
         
     }

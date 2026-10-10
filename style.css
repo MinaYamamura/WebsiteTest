@@ -10,97 +10,49 @@
     padding: 0;
     grid-template-columns: 1fr 3fr;
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
+    flex-direction: column;
 }
 .containerheader {
     flex: 1;
     min-width: 0;
-    margin-left: 0;                    /* closed: header starts at the left edge, burger sits inside it */
-    padding: 5px 25px 5px 90px;        /* left padding keeps the title clear of the burger */
+    margin-left: 0;        
+    padding: 10px 10px 10px 10px;
     background-color: #344966;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-    /* closing: wait for the sidebar to collapse, then slide back */
-    transition: margin-left 0.3s ease 0.3s,
-                padding-left 0.3s ease 0.3s;
+}
+.taskbar {
+    display: flex;
+    gap: 12px;
+    padding: 10px 10px 10px 10px;
 }
 
-.containersidebar.open + .containerheader {
-    margin-left: 75px;                 /* open: 70px sidebar + 5px gap */
-    padding-left: 15px;                /* 75 + 15 = 90, so the title stays exactly where it was */
-
-    /* opening: slide right first */
-    transition: margin-left 0.3s ease,
-                padding-left 0.3s ease;
-}
-.containersidebar {
-    position: absolute;
-    top: 0;
-    left: 0;                  /* never moves */
-
-    box-sizing: border-box;
-    padding: 10px;
-    background-color: #344966;
-    border-radius: 10px;
-    box-shadow: none;
-    max-width: 70px;
-    max-height: 70px;
-    overflow: hidden;
-
-    /* closing: collapse first, then fade the shadow once the header is back */
-    transition: max-height 0.3s ease,
-                box-shadow 0.3s ease 0.3s;
-}
-
-.containersidebar.open {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-    /* opening: wait for the header to move, then drop down */
-    transition: box-shadow 0.3s ease,
-                max-height 0.3s ease 0.3s;
-}
-.sidebar-icon:last-child {
-    margin-bottom: 0;
-}
-.sidebar-icon {
-    /* reset the default button look */
-    border: none;
+.nav-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
     padding: 0;
-    display: block;
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-    background-color: #F0F4EF;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    mask-position: center;
+    border: none;
+    cursor: pointer;
+
+    background-color: white;
+    -webkit-mask: var(--icon) center / contain no-repeat;
+    mask: var(--icon) center / contain no-repeat;
 }
-.sidebar-icon:hover  { background-color: var(--icon-hover); cursor: pointer; }
-.sidebar-icon:active { background-color: var(--icon-active); }
-.icon-menu     { -webkit-mask-image: url('img/menu-burger.png'); mask-image: url('img/menu-burger.png'); }
-.icon-home     { -webkit-mask-image: url('img/home.png');        mask-image: url('img/home.png'); }
-.icon-envelope { -webkit-mask-image: url('img/envelope.png');    mask-image: url('img/envelope.png'); }
-.icon-picture  { -webkit-mask-image: url('img/picture.png');     mask-image: url('img/picture.png'); }
-.icon-project  { -webkit-mask-image: url('img/project.png');     mask-image: url('img/project.png'); }
-.icon-menu:hover     { background-color: var(--icon-hover); cursor: pointer; }
-.icon-home:hover     { background-color: var(--icon-hover); cursor: pointer; }
-.icon-envelope:hover { background-color: var(--icon-hover); cursor: pointer; }
-.icon-picture:hover  { background-color: var(--icon-hover); cursor: pointer; }
-.icon-project:hover  { background-color: var(--icon-hover); cursor: pointer; }
-.icon-menu:active     { background-color: var(--icon-active); }
-.icon-home:active     { background-color: var(--icon-active); }    
-.icon-envelope:active { background-color: var(--icon-active); }
-.icon-picture:active  { background-color: var(--icon-active); }
-.icon-project:active  { background-color: var(--icon-active); }
+
+.nav-icon:hover {
+    background-color: #b8c7e0;
+}
+
+.icon-home     { --icon: url('img/home.png'); }
+.icon-picture  { --icon: url('img/picture.png'); }
+.icon-project  { --icon: url('img/project.png'); }
+.icon-envelope { --icon: url('img/envelope.png'); }
 
 #pageBody {
     display: flex;
     flex-direction: column;
-    gap: 24px;
 }
 
 #pageBody p {
@@ -108,14 +60,18 @@
     margin: 0px;
 }
 
+#pageBody .intro {
+    font-size: 0.9rem;
+    color: #abadab;
+    margin: 0 0 16px;
+    margin-top: -16px;
+}
+
 .group.row {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     align-items: flex-start;
-    margin-top: 10px;
-    margin-right: 5px;
-
 }
 
 .group.column {
@@ -125,19 +81,24 @@
     flex: 1 1 250px;   /* takes the leftover space, wraps below if under 250px */
 }
 
+#pageBody p + p {
+    margin-top: -10px;   /* cancels the 10px gap, only between two texts */
+}
+
 #pageBody img {
     height: auto;
     border-radius: 20px;
 }
 #pageBody figure {
     margin: 0;
-    width: 700px;
-    max-width: 100%;
+    width: auto;
+    max-width: 500px;
 }
 
 #pageBody figure img {
     display: block;   
-    width: 100%;
+    width: auto;
+    max-width: 100%;
 }
 
 #pageBody figcaption {
@@ -146,10 +107,13 @@
     font-style: italic;
     font-size: 0.8em;
 }
+#pageTitle {
+    margin-top: 0px;
+}
 h1 {
     color: #F0F4EF;
     text-shadow: 5px 5px 7px rgba(15, 20, 36, 0.575);
-    margin-bottom: -15px;
+    margin-bottom: 0px;
 }
 h2 {
     color: #F0F4EF;

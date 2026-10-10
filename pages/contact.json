@@ -1,6 +1,25 @@
 {
     "title": "Contact Me",
-    "blocks": [
-        { "type": "text", "value": "Feel free to reach out to me!" }
-    ]
+    "blocks": [{
+        "type": "group",
+        "layout": "row",
+        "blocks": [
+            {
+                "type": "group",
+                "layout": "row",
+                "blocks": [
+                    { "type": "image", "src": "img/discord.png", "alt": "DiscordLogo", "style": {"width": "64px", "height": "64px"} },
+                    {
+                        "type": "group",
+                        "layout": "column",
+                        "blocks": [
+                            { "type": "heading", "value": "Discord" },
+                            { "type": "text", "value": "@mina_yamaura" }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
 }
