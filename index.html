@@ -1,56 +1,20 @@
-<style>
-    .buttons {
-        background-color: #1e7ec2;
-        border: none;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 20px;
-        font-weight: bold;
-        font: 20px tahoma, sans-serif;
-        margin: 4px 2px;
-        height: 25px;
-        width: 150px;
-        border-radius: 12px;
-        padding: 4px 4px;
-        transition: background-color 0.3s, box-shadow 0.3s;
-    }
-    .buttons:hover {
-        background-color: #1a6aa0;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    .github {
-        background-color: #363a3d;
-        border: none;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 20px;
-        font-weight: bold;
-        font: 20px tahoma, sans-serif;
-        margin: 4px 2px;
-        height: 25px;
-        width: 220px;
-        border-radius: 12px;
-        transition: background-color 0.3s, box-shadow 0.3s;
-        padding: 4px 4px;
-    }
-    .github:hover {
-        background-color: #515457;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-</style>
+<!-- #0D1821 Black | #344966 Yale BLue | #F0F4EF Off-White -->
 
-<div>
-    <h1>Website</h1>
-    <p>Welcome to our website! We hope you find what you're looking for.</p>
-    <div>
-    <p>Here are some links to navigate through the site:</p>
-        <a class="buttons" href="buttons.html">Link to Buttons</a>
+<head>
+    <title>Mina Kegel's Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bodyclass">
+    <div class="containersidebar" id="sidebar">
+        <button class="sidebar-icon icon-menu" id="menuButton" aria-label="Menu" aria-expanded="false"></button>
+        <button class="sidebar-icon icon-home" data-page="home" aria-label="Home"></button>
+        <button class="sidebar-icon icon-envelope" data-page="contact" aria-label="Contact"></button>
+        <button class="sidebar-icon icon-picture" data-page="pictures" aria-label="Pictures"></button>
     </div>
-    <div>
-        <a class="github" href="https://github.com/MinaYamamura" target="_blank">Link to GitHub profile</a>
+    <div class ="containerheader" id="content">
+        <h1 id="pageTitle"></h1>
+        <p id="pageBody"></p>
     </div>
-</div>
+    <script src="scripts/loader.js"></script>
+    <script src="scripts/script.js"></script>
+</body>

@@ -1,0 +1,6 @@
+{
+    "title": "Contacts",
+    "blocks": [
+        { "type": "text", "value": "Feel free to reach out to me!" }
+    ]
+}

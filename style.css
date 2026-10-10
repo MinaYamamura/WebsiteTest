@@ -1,0 +1,130 @@
+.bodyclass {
+    background-color: #0D1821;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 1fr 3fr;
+    display: flex;
+    align-items: flex-start;
+}
+.containerheader {
+    flex: 1;
+    min-width: 0;
+    margin-left: 0;                    /* closed: header starts at the left edge, burger sits inside it */
+    padding: 5px 25px 5px 90px;        /* left padding keeps the title clear of the burger */
+    background-color: #344966;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    /* closing: wait for the sidebar to collapse, then slide back */
+    transition: margin-left 0.3s ease 0.3s,
+                padding-left 0.3s ease 0.3s;
+}
+
+.containersidebar.open + .containerheader {
+    margin-left: 75px;                 /* open: 70px sidebar + 5px gap */
+    padding-left: 15px;                /* 75 + 15 = 90, so the title stays exactly where it was */
+
+    /* opening: slide right first */
+    transition: margin-left 0.3s ease,
+                padding-left 0.3s ease;
+}
+.containersidebar {
+    position: absolute;
+    top: 0;
+    left: 0;                  /* never moves */
+
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #344966;
+    border-radius: 10px;
+    box-shadow: none;
+    max-width: 70px;
+    max-height: 70px;
+    overflow: hidden;
+
+    /* closing: collapse first, then fade the shadow once the header is back */
+    transition: max-height 0.3s ease,
+                box-shadow 0.3s ease 0.3s;
+}
+
+.containersidebar.open {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    /* opening: wait for the header to move, then drop down */
+    transition: box-shadow 0.3s ease,
+                max-height 0.3s ease 0.3s;
+}
+.sidebar-icon:last-child {
+    margin-bottom: 0;
+}
+.sidebar-icon {
+    /* reset the default button look */
+    border: none;
+    padding: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    background-color: #F0F4EF;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+.sidebar-icon:hover  { background-color: #a9aca8; cursor: pointer; }
+.sidebar-icon:active { background-color: #7a7d79; }
+.icon-menu     { -webkit-mask-image: url('img/menu-burger.png'); mask-image: url('img/menu-burger.png'); }
+.icon-home     { -webkit-mask-image: url('img/home.png');        mask-image: url('img/home.png'); }
+.icon-envelope { -webkit-mask-image: url('img/envelope.png');    mask-image: url('img/envelope.png'); }
+.icon-picture  { -webkit-mask-image: url('img/picture.png');     mask-image: url('img/picture.png'); }
+.icon-menu:hover     { background-color: #a9aca8; cursor: pointer; }
+.icon-home:hover     { background-color: #a9aca8; cursor: pointer; }
+.icon-envelope:hover { background-color: #a9aca8; cursor: pointer; }
+.icon-picture:hover  { background-color: #a9aca8; cursor: pointer; }
+.icon-menu:active     { background-color: #7a7d79; }
+.icon-home:active     { background-color: #7a7d79; }    
+.icon-envelope:active { background-color: #7a7d79; }
+.icon-picture:active  { background-color: #7a7d79; }
+
+#pageBody {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#pageBody p {
+    flex-basis: 100%;   /* text keeps its own full-width row */
+    margin: 0;
+}
+#pageBody img {
+    height: auto;
+    border-radius: 20px;
+}
+#pageBody figure {
+    margin: 0;
+    width: 700px;
+    max-width: 100%; 
+}
+
+#pageBody figure img {
+    display: block;   
+    display: block;
+    width: 100%;
+}
+
+#pageBody figcaption {
+    color: #abadab;
+    font-size: 0.9em;
+    margin-top: 5px;
+    font-style: italic;
+    font-size: 0.8em;
+}
+h1 {
+    color: #F0F4EF;
+}
+p {
+    color: #F0F4EF;
+}

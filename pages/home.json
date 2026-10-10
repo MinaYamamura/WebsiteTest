@@ -1,0 +1,10 @@
+{
+    "title": "Mina Kegel's Website",
+    "blocks": [
+        { "type": "text", "value": "Welcome to our website! We hope you find what you're looking for." },
+        { "type": "heading", "value": "About Me" },
+        { "type": "text", "value": "I am a hobbyist with a passion for creating beautiful and functional websites." },
+        { "type": "heading", "value": "What is this website about?" },
+        { "type": "text", "value": "This website is about showcasing my work." }
+    ]
+}
