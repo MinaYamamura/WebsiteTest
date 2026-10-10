@@ -12,6 +12,7 @@
     display: flex;
     align-items: stretch;
     flex-direction: column;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 .containerheader {
     flex: 1;
@@ -46,6 +47,7 @@
 }
 
 .icon-home     { --icon: url('img/home.png'); }
+.icon-user     { --icon: url('img/user.png'); }
 .icon-picture  { --icon: url('img/picture.png'); }
 .icon-project  { --icon: url('img/project.png'); }
 .icon-envelope { --icon: url('img/envelope.png'); }
@@ -83,6 +85,9 @@
 
 #pageBody p + p {
     margin-top: -10px;   /* cancels the 10px gap, only between two texts */
+}
+#pageBody a + a {
+    margin-top: -10px;
 }
 
 #pageBody img {

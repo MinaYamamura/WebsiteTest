@@ -1,0 +1,82 @@
+{
+    "title": "About Me",
+    "blocks":[
+        {"type": "intro", "value": "A few informations about me."},
+        {
+
+            "type": "group",
+            "layout": "row",
+            "blocks": [
+                {
+                    "type": "group",
+                    "layout": "column",
+                    "blocks": [
+                        {"type": "heading", "value": "Who am I?"},
+                        {"type": "text", "value": "My name is Mina Kegel, I am from Germany and I am 22yo born 01.01.2004."},
+                        {"type": "text", "value": "I have autism, adhd and since im 18yo I am publicaly anounced as Transgender and for the past years on hormone replacement therapy."},
+                        {"type": "text", "value": "My pronouns are simply She/Her and It, but that is more of a joke but i woudnt mind it."}
+                    ]
+                },
+                {
+                    "type": "group",
+                    "layout": "column",
+                    "blocks": [
+                        {"type": "heading", "value": "My hobbies?"},
+                        {"type": "text", "value": "My hobbies range from cars to woodwork over electronics and back to instruments."},
+                        {"type": "text", "value": "My most prominent hobbies are:"},
+                        {"type": "text", "value": "-Playing Guitar since im ~16yo."},
+                        {"type": "text", "value": "-I love researching about my interests."},
+                        {"type": "text", "value": "-Learning about how Computers work, learning about Hexadecimal and Binary."},
+                        {"type": "text", "value": "As well as learnign about Binary computational systems."}
+                    ]
+                },
+                {
+                    "type": "group",
+                    "layout": "column",
+                    "blocks": [
+                        {"type": "heading", "value": "My favorite Movies"},
+                        {"type": "text", "value": "Links to Amazon prime video:", "italic": true},
+                        {"type": "link", "href": "https://www.amazon.de/gp/video/detail/B0B6RKY4WS", "value":"The Ring"},
+                        {"type": "link", "href": "https://www.amazon.de/gp/video/detail/B0GYJGCZ9C", "value":"Hachiko"},
+                        {"type": "link", "href": "https://www.amazon.de/gp/video/detail/B0CGMSRCY1", "value":"Yamato"},
+                        {"type": "link", "href": "https://www.amazon.de/gp/video/detail/B0FM3V48MY", "value":"Kalaschinikov AK47"},
+                        {"type": "link", "href": "https://www.amazon.de/s/ref=nb_sb_noss_1?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Dinstant-video&field-keywords=Saw", "value":"Saw series"},
+                        {"type": "link", "href": "https://www.amazon.de/gp/video/detail/B0C5GFXGCH", "value":"The Nun"},
+                        {"type": "link", "href": "https://www.amazon.de/s/ref=nb_sb_noss_1?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Dinstant-video&field-keywords=conjuring", "value":"Conjuring Series"}
+                    ]
+                },
+                {
+                    "type": "group",
+                    "layout": "column",
+                    "blocks": [
+                        {"type": "heading", "value": "My favorite Anime"},
+                        {"type": "text", "value": "Links to Wikipedia:", "italic": true},
+                        {"type": "link", "href": "https://en.wikipedia.org/wiki/Naruto", "value":"Naruto"},
+                        {"type": "link", "href": "https://en.wikipedia.org/wiki/Naruto_(TV_series)", "value":"Naruto Shippuden"},
+                        {"type": "link", "href": "https://en.wikipedia.org/wiki/Wise_Man%27s_Grandchild", "value":"Wise Man's Grandchild"},
+                        {"type": "link", "href": "https://en.wikipedia.org/wiki/Overlord_(novel_series)", "value":"Overlord"},
+                        {"type": "link", "href": "https://en.wikipedia.org/wiki/Initial_D", "value":"Initial D"},
+                        {"type": "link", "href": "https://en.wikipedia.org/wiki/MF_Ghost", "value":"MF Ghost"},
+                        {"type": "link", "href": "https://en.wikipedia.org/wiki/Wangan_Midnight", "value":"Wangan Midnight"},
+                        {"type": "link", "href": "https://en.wikipedia.org/wiki/Kuroko%27s_Basketball", "value":"Kuroko no basket"},
+                        {"type": "link", "href": "https://en.wikipedia.org/wiki/Haikyu!!", "value":"Haikyu"},
+                        {"type": "link", "href": "https://en.wikipedia.org/wiki/The_Misfit_of_Demon_King_Academy", "value":"The Misfit of Demon King Academy"}
+                    ]
+                },
+                {
+                    "type": "group",
+                    "layout": "column",
+                    "blocks": [
+                        {"type": "heading", "value": "My favorite Cars"},
+                        {"type": "text", "value":"Toyota AE86"},
+                        {"type": "text", "value":"Mazda RX7"},
+                        {"type": "text", "value":"Honda S2000"},
+                        {"type": "text", "value":"Mitsubishi Gallant VR4"},
+                        {"type": "text", "value":"Mclaren 675LT"},
+                        {"type": "text", "value":"Porsche 718 Spyder RS"}
+                    ]
+                }
+            ]
+        }
+    ]
+}

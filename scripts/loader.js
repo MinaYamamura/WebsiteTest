@@ -14,6 +14,7 @@ async function loadPage(name) {
           if (el) body.append(el);
         }
     } catch (error) {
+        body.replaceChildren();
         title.textContent = 'Page not found';
     }
 }
@@ -23,6 +24,7 @@ function buildBlock(block) {
         case 'text': {
             const p = document.createElement('p');
             p.textContent = block.value;
+            if (block.italic) p.style.fontStyle = "italic";
             return p;
         }
         case 'heading': {
