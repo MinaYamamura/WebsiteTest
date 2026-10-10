@@ -1,0 +1,40 @@
+{
+    "title": "My Projects",
+    "blocks": [{
+        "type": "group",
+        "layout": "row",
+        "blocks": [
+            {
+                "type": "group",
+                "layout": "row",
+                "blocks": [
+                    { "type": "image", "src": "img/github.png", "alt": "GitHubLogo", "style": {"width": "64px", "height": "64px"} },
+                    {
+                        "type": "group",
+                        "layout": "column",
+                        "blocks": [
+                            { "type": "heading", "value": "GitHub" },
+                            { "type": "link", "href": "https://github.com/MinaYamamura?tab=repositories", "value": "My Github Repositories." }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "group",
+                "layout": "row",
+                "blocks": [
+                    { "type": "image", "src": "img/modrinth.jpeg", "alt": "ModrinthLogo", "style": {"width": "64px", "height": "64px"} },
+                    {
+                        "type": "group",
+                        "layout": "column",
+                        "blocks": [
+                            { "type": "heading", "value": "Modrinth" },
+                            { "type": "link", "href": "https://modrinth.com/user/MinaYamamura", "value": "My Modrinth Profile." }
+                        ]
+                    }
+                ]
+            }
+        ]
+}]
+}
+    

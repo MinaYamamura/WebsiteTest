@@ -1,11 +1,30 @@
 {
     "title": "Mina Kegel's Website",
     "blocks": [
-        { "type": "text", "value": "Welcome to my website! I am a hobbyist of various things." },
-        { "type": "heading", "value": "About Me" },
-        { "type": "text", "value": "I am a hobbyist with a passion for creating beautiful and functional websites." },
-        { "type": "image", "src": "img/laptop1.jpg", "alt": "Placeholder Image", "caption": "Placeholder" },
-        { "type": "heading", "value": "What is this website about?" },
-        { "type": "text", "value": "This website is about showcasing my work." }
+        { "type": "text", "value": "Welcome to my website!" },
+        {
+            "type": "group",
+            "layout": "row",
+            "blocks": [
+                {
+                    "type": "group",
+                    "layout": "column",
+                    "blocks": [
+                        { "type": "heading", "value": "About Me" },
+                        { "type": "text", "value": "My name is Mina Kegel and im 22 years old." },
+                        { "type": "text", "value": "I am a hobbyist with various interests." },
+                        { "type": "image", "src": "img/laptop1.jpg", "alt": "Placeholder Image", "caption": "Placeholder" }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "layout": "column",
+                    "blocks": [
+                        { "type": "heading", "value": "What is this website about?" },
+                        { "type": "text", "value": "This website is about showcasing my work and projects of various things." }  
+                    ]
+                }
+            ]
+        }
     ]
 }

@@ -10,56 +10,58 @@ async function loadPage(name) {
         title.textContent = data.title;
     
         for (const block of data.blocks) {
-            let el;
-            switch (block.type) {
-                case 'heading': {
-                    const level = Math.min(Math.max(block.level || 2, 2), 6);
-                    el = document.createElement(`h${level}`);
-                    el.textContent = block.value;
-                    break;
-                }
-                case 'text':
-                    el = document.createElement('p');
-                    el.textContent = block.value;
-                    break;
-                case 'link': {
-                    el = document.createElement('p');
-                    const a = document.createElement('a');
-                    a.textContent = block.value;
-                    if (block.page) {
-                        a.href = '#';
-                        a.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            loadPage(block.page);
-                        });
-                    } else {
-                        a.href = block.href;
-                        if (block.external) {
-                            a.target = '_blank';
-                            a.rel = 'noopener noreferrer';
-                        }
-                    }
-                    el.append(a);
-                    break;
-                }
-                case 'image': {
-                    const figure = document.createElement('figure');
-                    const img = document.createElement('img');
-                    img.src = block.src;
-                    img.alt = block.alt || '';
-                    figure.append(img);
-                    if (block.caption) {
-                        const caption = document.createElement('figcaption');
-                        caption.textContent = block.caption;
-                        figure.append(caption);
-                    }
-                    el = figure;
-                    break;
-                }
-            }
-                if (el) body.append(el);
-            }
+          const el = buildBlock(block);
+          if (el) body.append(el);
+        }
     } catch (error) {
         title.textContent = 'Page not found';
     }
+}
+
+function buildBlock(block) {
+    switch (block.type) {
+        case 'text': {
+            const p = document.createElement('p');
+            p.textContent = block.value;
+            return p;
+        }
+        case 'heading': {
+            const h = document.createElement('h2');
+            h.textContent = block.value;
+            return h;
+        }
+        case 'image': {
+            const figure = document.createElement('figure');
+            const img = document.createElement('img');
+            img.src = block.src;
+            img.alt = block.alt || '';
+            figure.append(img);
+            if (block.caption) {
+                const caption = document.createElement('figcaption');
+                caption.textContent = block.caption;
+                figure.append(caption);
+            }
+            if (block.style) Object.assign(figure.style, block.style);
+            return figure;
+        }
+        case 'group': {
+            const div = document.createElement('div');
+            div.className = 'group ' + (block.layout || 'column');
+            for (const child of block.blocks) {
+                const childEl = buildBlock(child);
+                if (childEl) div.append(childEl);
+            }
+            return div;
+        }
+        case 'link': {
+            const a = document.createElement('a');
+            a.href = block.href;
+            a.textContent = block.value || block.href;   // visible text, falls back to the URL
+            a.target = '_blank';                          // opens in a new tab
+            a.rel = 'noopener noreferrer';
+            return a;
+        }
+        
+    }
+    return null;
 }
