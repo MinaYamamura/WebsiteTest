@@ -33,7 +33,25 @@
                         ]
                     }
                 ]
+            },
+            {
+                "type": "group",
+                "layout": "row",
+                "blocks": [
+                    { "type": "image", "src": "img/youtube.png", "alt": "YoutubeLogo", "style": {"width": "64px", "height": "64px"} },
+                    {
+                        "type": "group",
+                        "layout": "column",
+                        "blocks": [
+                            { "type": "heading", "value": "NES Chiptune Songs" },
+                            { "type": "link", "href": "https://www.youtube.com/watch?v=dvtYoZei-0U", "value": "NES Chiptune Song M1E1." },
+                            { "type": "link", "href": "https://www.youtube.com/watch?v=sYWrvdYZMZk", "value": "NES Chiptune Song SONG2." }
+
+                        ]
+                    }
+                ]
             }
+
         ]
 }]
 }
